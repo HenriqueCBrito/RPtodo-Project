@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initialize To-Do App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, select, button {
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Initialize To-Do App</h1>
+    
+    <form action="/init" method="post">
+        <label for="db_path">Database Path:</label>
+        <input type="text" id="db_path" name="db_path" value="todo.json" required>
+
+        <label for="db_type">Database Type:</label>
+        <select id="db_type" name="db_type" required>
+            <option value="json">JSON</option>
+            <option value="mongodb">MongoDB</option>
+        </select>
+
+        <button type="submit">Initialize</button>
+    </form>
+</body>
+</html>

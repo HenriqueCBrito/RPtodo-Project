@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  tests:
+    cmds:
+      - | 
+        echo "Running Tests!"
+        python -m pytest tests
+    silent: true
