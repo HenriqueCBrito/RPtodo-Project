@@ -19,8 +19,7 @@ jobs:
       - run: pip --version
       - run: python3 --version
       - run: |
-          pip3 install -U virtualenv
-          python3 -m virtualenv venv
+          python3 -m venv venv
           source venv/bin/activate
           pip install pytest
       - run: python -m pytest tests
