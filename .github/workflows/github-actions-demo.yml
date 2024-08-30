@@ -17,5 +17,10 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: pip --version
-      - run: python3 -m pip install pytest
-      - run: python3 -m pytest tests
+      - run: |
+          pip3 install -U virtualenv
+          python3 -m virtualenv venv
+          source venv/bin/activate
+          pip install pytest
+      - run: python -m pytest tests
+      
